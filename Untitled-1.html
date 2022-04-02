@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The input element</h1>
+
+
+	<label for="f">°F:</label>
+  	<input type="text" id="f" name="f"><br><br>
+  	<label for="c">°C:</label>
+  	<input type="text" id="c" name="c"><br><br>
+
+
+	<button type="button" onclick="ToC()">To °C</button>
+	<button type="button" onclick="ToF()">To °F</button>
+  <button type="button" onclick="reset()">reset</button>
+
+
+  <script>
+    function ToC() {
+    	var f = document.getElementById("f").value;
+    	var c = (5/9) * (f-32);
+    	document.getElementById("c").value = c;
+    }
+
+    function ToF() {
+        var c = document.getElementById("c").value;
+    	var f =(9/5) * c+32;
+    	document.getElementById("f").value = f;   
+    }    
+    function reset() {
+    	document.getElementById("f").value = "";   
+      document.getElementById("c").value = "";   
+    }    
+    
+
+  </script>
+
+</body>
+</html>
